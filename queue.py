@@ -17,6 +17,12 @@ class myQueue:
             print("queue empty")
         else:
             self.front+=1
+    def display(self):
+        if self.front>self.rear:
+            print("queue empty")
+            return
+        for i in range(self.front,self.rear+1):
+            print(self.queue[i],end=' ')
 n=int(input())            
 q=myQueue(3)
 q.enqueue(10)
