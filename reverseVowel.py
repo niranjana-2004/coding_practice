@@ -3,7 +3,7 @@ def reverseVowels(s):
     s=list(s)
     i,j=0,len(s)-1
 
-    while i>j:
+    while i<j:
         if s[i] not in v:
             i+=1
         elif s[j] not in v:
