@@ -1,0 +1,19 @@
+
+def isValid(s: str) -> bool:
+        stack = []
+        mapping = {
+            ')': '(',
+            '}': '{',
+            ']': '['
+        }
+
+        for ch in s:
+            if ch in mapping:  
+                if not stack or stack.pop() != mapping[ch]:
+                    return False
+            else:  
+                stack.append(ch)
+
+        return not stack
+str=input()
+print(isValid(str))
