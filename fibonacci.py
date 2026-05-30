@@ -1,10 +1,19 @@
-def fibonacci(n):
-    if n==1:
-        return [0]
-    if n==2:
-        return [0,1]
-    fib=[0,1]
-    for i in range(2,n):
-        fib.append(fib[i-1]+fib[i-2])
-    return fib
-print(fibonacci(7))
+#method 1
+'''n=int(input())
+a=0
+b=1
+for i in range(n):
+    print(a,end=" ")
+    c=a+b
+    a=b
+    b=c'''
+
+#method 2
+n=int(input())
+a=0
+b=1
+for i in range(n):
+    c=a+b
+    a=b
+    b=c
+print(a)
